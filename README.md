@@ -73,11 +73,11 @@ Using ```SMOTEENN``` algorithm, the model uses a combination of over and undder 
 ### Balanced Random Forest Classifier
 After splitting the data into training and testing sets for the Ensemble learning, we see that there are 51,366 low risk and 246 high risk. Using ```BalancedRandomForestClassifier``` from the ```imblearn``` library, we see the following results: 
 
-![Ensemble_RandomForest.png](Images/Ensemble_RandomForest.png)
+![Balanced.png](Images/Balanced.png)
 
 - **Balanced Accuracy Score:** 78.85%
-- **"High Risk" Rates:** Precision Rate = 9% and the Sensitivity/ Recall = 92%. 
-- **"Low Risk" Rates:** Precision Rate = 100% and the Sensitivity/ Recall = 94%.
+- **"High Risk" Rates:** Precision Rate = 3% and the Sensitivity/ Recall = 70%. 
+- **"Low Risk" Rates:** Precision Rate = 100% and the Sensitivity/ Recall = 87%.
 
 From this model, we can also identify which features are most important and list them accordingly: 
 
