@@ -17,11 +17,24 @@ The following are the six specific models that will be tested:
 
 ## Resources 
 - Original Data Source: [LoanStats_2019Q1.csv](https://github.com/meghanhkoon/Credit_Risk_Analysis/blob/main/Resources/LoanStats_2019Q1.csv)
-- Software: Jupyter Notebook, ```imbalanced-learn``` and ```scikit-learn``` libraries
+- Software: Jupyter Notebook, Python, Python Libraries: ```imbalanced-learn``` and ```scikit-learn```, and Anaconda mlenv environment
 
 
 ## Results
-describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
+After the inital cleaning of the original dataset's "loan_status" column, there were 68,470 low risk and 347 high risk loans. We then split the data into testing and training datasets using the ```train_test_split``` function. In the training set, 51,366 were considered "low risk" and the remaining 246 were "high risk" applications.
+```
+#Split into Train and Test Sets 
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1)
+```
+Next, we used the six different models to determine which was the best for predicting credit risk. 
+
+### Oversampling
+### Undersampling
+### Combination of Over and Undersampling - SMOTE
+### Ensemble Learners
+
 
 ## Summary 
 Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
