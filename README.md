@@ -96,4 +96,16 @@ For the sixth model, we use the ```EasyEnsembleClassifier``` to train and predic
 
 
 ## Summary 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+In summary, the results of the six models' performance are as follows: 
+
+- ```RandomOverSampler```: **Balanced Accuracy Score:** 65.47%, **"High Risk" Rates:** Precision Rate = 1% and the Sensitivity/ Recall = 69%, **"Low Risk" Rates:** Precision Rate = 100% and the Sensitivity/ Recall = 40%.
+- ```SMOTE``` Oversampling: **Balanced Accuracy Score:** 66.2%, **"High Risk" Rates:** Precision Rate = 1% and the Sensitivity/ Recall = 63%, **"Low Risk" Rates:** Precision Rate = 100% and the Sensitivity/ Recall = 69%.
+- ```ClusterCentroids``` Undersampling: **Balanced Accuracy Score:** 54.42%, **"High Risk" Rates:** Precision Rate = 1% and the Sensitivity/ Recall = 69%, **"Low Risk" Rates:** Precision Rate = 100% and the Sensitivity/ Recall = 40%.
+- Combination ```SMOTEENN```: **Balanced Accuracy Score:** 64.73%, **"High Risk" Rates:** Precision Rate = 1% and the Sensitivity/ Recall = 72%, **"Low Risk" Rates:** Precision Rate = 100% and the Sensitivity/ Recall = 57%.
+- ```BalancedForestClassifier```: **Balanced Accuracy Score:** 78.85%, **"High Risk" Rates:** Precision Rate = 3% and the Sensitivity/ Recall = 70%, **"Low Risk" Rates:** Precision Rate = 100% and the Sensitivity/ Recall = 87%.
+- ```EasyEnsembleClassifier```: **Balanced Accuracy Score:** 93.17%, **"High Risk" Rates:** Precision Rate = 9% and the Sensitivity/ Recall = 92%, **"Low Risk" Rates:** Precision Rate = 100% and the Sensitivity/ Recall = 94%.
+
+From this summary, we see that there is a commonality that Low Risk rates generally have a precision rate of 100%. We also see that the High Risk rates tend to be very small at 1% for the first four models. However, when we use the Ensemble Learning algorithms, the precision rate and the sensitivity/ recall rate for High Risk starts to go up. 
+
+When looking at all six models, it is clear that the ```EasyEnsembleClassifier``` model had the best balanced accuracy score of 93.17%. Not only did this model have the highest accuracy score, but it also produced the highest Precision Rate for "High Risk" credit card applicants with a Sensitivity/ Recall rate of 92% (also the highest). The result for predicting "Low Risk" had a Precision rate of 100% while also having the highest Sensitivty/ Recall rate of 94%. Overall, the ```EasyEnsembleClassifier``` is recommended to use to predict credit card risk. 
+
